@@ -1,0 +1,42 @@
+step 1. n = 0, return m sbg hasil 
+dan stop. Jika tidak kembali ke step2
+
+Step 2. Bagi nilai m dengan n, 
+masukan nilai sisanya ke r
+
+step 3. Masukan nilai ke m dan
+nilai r ke n.  kembali ke step 1.
+
+while n=/ 0 do 
+r <- m mod n
+m <- n
+n <- r 
+return m
+
+
+Cari nilai KPK 3 dan 4, algoritma dan psudocode
+
+algoritma FPB: 
+step 1. mencari angka terbesar untuk pembagi angka yang ingin dibagi, yang mana bila dibagi tidak bersisa 
+
+step 2. Jika dari angka pembagi tersebut masih dapat dibagi, maka terus lakukan pembagian dari angka terbesar 
+hingga tidak dapat dibagi kembali tanpa sisa
+
+step 3. angka yang sama adalah 
+
+psudocode: 
+
+int fpb(int a, int b){
+ int i;
+ if (a > b){
+  i = a;
+  a = b;
+  b = i;
+ }
+  while (a > 0){
+   i = b % a;
+   b = a;
+   a = i;
+  }
+ return b;
+}
