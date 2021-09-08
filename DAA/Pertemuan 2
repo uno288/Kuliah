@@ -1,0 +1,118 @@
+import numpy as np
+print(np.__version__)
+
+##latihan
+print("Hello World!")
+print ("Nama Saya Herjuno")
+print ("NIM saya 2020071043")
+
+if (5>2):
+    print ("Five is greater than two")
+    
+=======
+x=6
+y="john"
+print(x)
+print(y)
+
+========
+x=7
+x="Sally"
+print(x)
+
+=========================
+## menampilkan nilai di mylist
+def getfirst(mylist):
+  return mylist[0]
+
+getfirst([1,2,3])
+getfirst([1,2,3,4,5,6,7,8,9,10])
+
+================================
+def getsecond(mylist):
+  return mylist[-3]
+
+getsecond([1,2,3,4])
+
+================================
+## Penjumlahan
+def getsum (mylist):
+  sum = 0
+  for item in mylist :
+    sum = sum + item
+  return sum
+
+getsum([1,2,3,4])
+
+================================
+## perkalian
+def gettimes(mylist):
+  t = 1
+  for item in mylist : 
+    t = t*item
+  return t
+
+gettimes([1,2,3,4])
+
+===============================
+## pembagian
+def getbagi(mylist):
+  t = 4
+  for item in mylist : 
+    t = item/t
+  return t
+getbagi([4,12,24,40])
+=========================
+## Pemjumlahan lebih dari 2 himpunan
+def getsum2(mylist):
+  sum = 0
+  for row in mylist :
+     for item in row :
+      sum = sum + item
+  return sum
+
+getsum2([[2,4],[4,6],[3,4]])      
+
+getbagi([4,12,24,40])
+
+==========================
+## bagi 2 himpunan
+def getbagi2(mylist):
+  bagi = 100
+  for row in mylist :
+     for item in row :
+      bagi =  bagi/item
+  return bagi    
+
+getbagi2([[1,2,5],[1,5,2]])  
+
+============================
+## kurang 2 himpunan
+def getkurang(mylist):
+  k = 10
+  for row in mylist :
+     for item in row :
+      k =  k - item
+  return k   
+
+getkurang([[2,2,1],[1,1,2]])  
+
+===========================
+## searchbinary
+def searchbinary(mylist, item):
+    pertama = 0
+    terakhir = len(mylist) -1
+    foundflag = False
+    while (pertama <= terakhir and not foundflag):
+      mid = (pertama+terakhir)//2
+      if mylist[mid] == item :
+        foundflag = True
+      else :
+        if item < mylist[mid]:
+          terakhir = mid -1
+        else:
+          pertama = mid + 1
+    return foundflag
+
+searchbinary ([1,2,3,4,5,6],6)
+searchbinary ([1,2,3,4,5,6],-1)
