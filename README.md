@@ -1,2 +1,2 @@
 # Kuliah
-Folder tugas kuliah
+Folder Berisi tugas kuliah dan latihan smester 3
