@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.upj.tif.javafx1.HelloController">
+   <children>
+      <Label layoutX="184.0" layoutY="14.0" text="Aplikasi GUI">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="80.0" text="Isi Pesan">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text_pesan" layoutX="109.0" layoutY="77.0" prefHeight="25.0" prefWidth="387.0" />
+      <Button fx:id="button_simpan" layoutX="109.0" layoutY="117.0" mnemonicParsing="false" onAction="#button_simpan_onclick" text="Simpan" />
+      <Button fx:id="button_reset" layoutX="193.0" layoutY="117.0" mnemonicParsing="false" onAction="#button_reset_onclick" text="Reset" />
+      <Button layoutX="274.0" layoutY="117.0" mnemonicParsing="false" text="Button" />
+      <Label fx:id="label_pesan" alignment="CENTER" layoutX="246.0" layoutY="162.0" style="-fx-background-color: #8CC739; -fx-text-fill: #000000;" text="Label" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
