@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="524.0" prefWidth="500.0" style="-fx-background-color: #87AAAA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uas.aplikasi.SecondController">
+   <children>
+      <Label fx:id="helloName" layoutX="32.0" layoutY="68.0" prefHeight="17.0" prefWidth="141.0" text="Hello," textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="logoutButton" layoutX="397.0" layoutY="478.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: grey;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logout.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField fx:id="tipeRumahField" layoutX="112.0" layoutY="103.0" prefHeight="8.0" prefWidth="149.0" />
+      <TextField fx:id="LTField" layoutX="111.0" layoutY="142.0" prefHeight="8.0" prefWidth="149.0" />
+      <TextField fx:id="LBField" layoutX="111.0" layoutY="181.0" prefHeight="8.0" prefWidth="149.0" />
+      <Button fx:id="addButton" layoutX="29.0" layoutY="479.0" mnemonicParsing="false" onAction="#addData" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #2FDD92 #2FDD92;" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@add.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="updateButton" layoutX="118.0" layoutY="479.0" mnemonicParsing="false" onAction="#updateData" style="-fx-background-color: #FEE440;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@update.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="deleteButton" layoutX="208.0" layoutY="479.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #FF7272;" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@close.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="32.0" layoutY="107.0" text="Tipe Rumah :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="146.0" text="LT                 :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="186.0" text="LB                 :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="kamarField" layoutX="326.0" layoutY="105.0" prefHeight="8.0" prefWidth="149.0" />
+      <TextField fx:id="wcField" layoutX="326.0" layoutY="143.0" prefHeight="8.0" prefWidth="149.0" />
+      <Label layoutX="274.0" layoutY="107.0" text="Kamar  :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="274.0" layoutY="147.0" text="WC       :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TableView fx:id="tableView" layoutX="26.0" layoutY="229.0" onMouseClicked="#handleMouseAction" prefHeight="229.0" prefWidth="455.0" style="-fx-background-color: #F6F2D4;">
+        <columns>
+          <TableColumn fx:id="tipeRumah_col" prefWidth="93.0" text="Tipe Rumah" />
+            <TableColumn fx:id="LT_col" prefWidth="61.66668701171875" text="LT" />
+            <TableColumn fx:id="LB_col" prefWidth="57.66668701171875" text="LB" />
+            <TableColumn fx:id="kamar_col" prefWidth="70.33331298828125" text="Kamar" />
+            <TableColumn fx:id="wc_col" prefWidth="54.0" text="WC" />
+            <TableColumn fx:id="harga_col" prefWidth="119.0" text="Harga" />
+        </columns>
+      </TableView>
+      <TextField fx:id="hargaField" layoutX="327.0" layoutY="181.0" prefHeight="8.0" prefWidth="149.0" />
+      <Label layoutX="274.0" layoutY="186.0" text="Harga   :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane layoutY="-4.0" prefHeight="58.0" prefWidth="500.0" style="-fx-background-color: #F6D7A7;">
+         <children>
+            <Label alignment="CENTER" prefHeight="61.0" prefWidth="500.0" text="RumahKu" textAlignment="CENTER" textFill="#979393">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="49.0" fitWidth="40.0" layoutX="334.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
